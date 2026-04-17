@@ -4,6 +4,7 @@ import './globals.css'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { RESTAURANT_CONFIG } from '@/lib/config'
+import { Analytics } from '@vercel/analytics/next'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -60,6 +61,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
