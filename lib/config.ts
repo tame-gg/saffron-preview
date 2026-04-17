@@ -39,7 +39,7 @@ export const RESTAURANT_CONFIG = {
   about: {
     shortBio: 'Born from a family kitchen in Urmia. Refined in Charlotte.',
     story: [
-      'Saffron Kitchen began as a memory — the smell of slow-simmered ghormeh sabzi filling a small apartment, a grandmother\'s hands staining gold with turmeric, the quiet ritual of gathering around a sofreh. When founder Dara Shirazi brought those memories from Urmia to Charlotte\'s Central Avenue, he refused to leave them at the border.',
+      'Saffron Kitchen began as a memory — the smell of slow-simmered ghormeh sabzi filling a small house, a grandmother\'s hands staining gold with turmeric, the quiet ritual of gathering around a sofreh. When founder Sahar Zandi brought those memories from Urmia to Charlotte\'s Central Avenue, she refused to leave them at the border.',
       'Every dish on our menu is an act of remembrance: meticulous, personal, and alive with the ancient Persian principle of ta\'arof — the art of making a guest feel more welcome than they ever expected. We source heritage saffron from Khorasan, barberries from family import, and lamb from farms within ninety miles of Charlotte.',
       'This is not fusion. This is Persian cuisine, cooked with full conviction, served in a room designed to hold a conversation.',
     ],
