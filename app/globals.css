@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FAF6EE;
+    color: #1A1614;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  ::selection {
+    background-color: #D4A437;
+    color: #FAF6EE;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .heading-display {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.05;
+  }
+
+  .farsi-text {
+    font-family: var(--font-amiri), 'Traditional Arabic', 'Arial Unicode MS', serif;
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-saffron text-charcoal font-sans font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-saffron-dark hover:shadow-lg active:scale-[0.98];
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 border border-cream/60 text-cream font-sans font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-cream/10 hover:border-cream active:scale-[0.98];
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 border border-charcoal/40 text-charcoal font-sans font-medium text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:bg-charcoal hover:text-cream hover:border-charcoal active:scale-[0.98];
+  }
+
+  .container-site {
+    @apply max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16;
+  }
+
+  .section-label {
+    @apply font-sans text-xs tracking-[0.3em] uppercase text-saffron;
+  }
+
+  .section-title {
+    font-family: var(--font-cormorant), Georgia, serif;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-light leading-tight text-charcoal;
+  }
+}
+
+/* Mandala ring animations */
+@keyframes mandala-spin-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes mandala-spin-ccw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.mandala-ring-1 {
+  transform-origin: 400px 400px;
+  animation: mandala-spin-cw 120s linear infinite;
+}
+
+.mandala-ring-2 {
+  transform-origin: 400px 400px;
+  animation: mandala-spin-ccw 80s linear infinite;
+}
+
+.mandala-ring-3 {
+  transform-origin: 400px 400px;
+  animation: mandala-spin-cw 55s linear infinite;
+}
+
+.mandala-ring-4 {
+  transform-origin: 400px 400px;
+  animation: mandala-spin-ccw 35s linear infinite;
+}
+
+/* Scroll indicator bounce */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.4; }
+}
+
+.scroll-indicator {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4A437;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8892B;
+}
